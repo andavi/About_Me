@@ -10,6 +10,7 @@
 <body>
     <h1>About Andrew</h1>
 
+    <p id="questions">Questions:</p>
     <ol>
         <li>Does Andrew like to hike?</li>
         <li>Is Andrew SCUBA certified?</li>
@@ -17,9 +18,20 @@
     </ol>
 
     <script>
+        // intoduction
         var userName = prompt('Welcome to my site. What\'s your name?');
 
+        // hike question
         var hike = prompt('Does Andrew like to hike?');
+        hike = hike.toLowerCase();
+        if (hike === 'yes' || hike === 'yeah') {
+            alert('Nice job! I love to hike.');
+        } else if (hike === no) {
+            alert('WRONG! I do like to hike.');
+        } else {
+            alert('Come on, answer yes or no');
+        }
+
         var scuba = prompt('Is Andrew SCUBA certified?');
     </script>
 </body>
