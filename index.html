@@ -22,6 +22,7 @@
             <li>Does he want to be?</li>
         </ol>
     </div>
+    <p id="outro"></p>
     
 
     <script>
@@ -107,10 +108,15 @@
 
         // outro
         if (questionsCorrect > 3) {
-            alert('Great job ' + userName + '! You answered ' + questionsCorrect + ' out of 5 questions correctly.');
+            var message = 'Great job ' + userName + '! You answered ' + questionsCorrect + ' out of 5 questions correctly.'
+            alert(message);
+            document.getElementById('outro').innerHTML = message;
         } else {
-            alert('You answered ' + questionsCorrect + ' out of 5 questions correctly. Better luck next time!');
+            message = 'Mediocre job, ' + userName + '. You answered ' + questionsCorrect + ' out of 5 questions correctly. Better luck next time!'
+            alert(message);
+            document.getElementById('outro').innerHTML = message;
         }
+        console.log(questionsCorrect + ' out of 5 questions answered correctly');
     </script>
 </body>
 </html>
