@@ -3,9 +3,15 @@
 }
 
 body {
+    background-color: rgb(142, 198, 247);
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 20px;
+    margin: auto;
+    width: 35%;
 }
+
+/* body {
+    
+} */
 
 #questions {
     font-size: 135%;

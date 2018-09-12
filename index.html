@@ -10,29 +10,52 @@
 <body>
     <h1>About Andrew</h1>
 
+    <p>This is a game about me. Answer the questions with yes or no to see how much you know about me.</p>
+
     <p id="questions">Questions:</p>
     <ol>
         <li>Does Andrew like to hike?</li>
         <li>Is Andrew SCUBA certified?</li>
         <li>Is Andrew a veteran?</li>
+        <li>Is Andrew ASA 101 - Basic Keel Boat Certified?</li>
+        <li>Does he want to be?</li>
     </ol>
 
     <script>
         // intoduction
+        var questionsCorrect = 0;
         var userName = prompt('Welcome to my site. What\'s your name?');
+        alert('Hello ' + userName + '. We are going to play a game. Answer yes or no to the following questions.');
 
         // hike question
         var hike = prompt('Does Andrew like to hike?');
         hike = hike.toLowerCase();
-        if (hike === 'yes' || hike === 'yeah') {
+        if (hike[0] === 'y') {
             alert('Nice job! I love to hike.');
-        } else if (hike === no) {
+            console.log('hike question correct');
+            questionsCorrect++;
+        } else if (hike[0] === 'n') {
             alert('WRONG! I do like to hike.');
+            console.log('hike question wrong');
         } else {
-            alert('Come on, answer yes or no');
+            alert('Come on, answer yes or no.');
+            console.log('hike question not answered with yes or no');
         }
 
+        // scuba question
         var scuba = prompt('Is Andrew SCUBA certified?');
+        scuba = scuba.toLowerCase();
+        if (scuba[0] === 'y') {
+            alert('Nice job! I am SCUBA ceritified.');
+            console.log('scuba question correct');
+            questionsCorrect++;
+        } else if (scuba[0] === 'n') {
+            alert('WRONG! I am SCUBA ceritified.');
+            console.log('scuba question wrong');
+        } else {
+            alert('Come on, answer yes or no.');
+            console.log('scuba question not answered with yes or no');
+        }
     </script>
 </body>
 </html>
