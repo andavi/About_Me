@@ -12,14 +12,17 @@
 
     <p>This is a game about me. Answer the questions with yes or no to see how much you know about me.</p>
 
-    <p id="questions">Questions:</p>
-    <ol>
-        <li>Does Andrew like to hike?</li>
-        <li>Is Andrew SCUBA certified?</li>
-        <li>Is Andrew a veteran?</li>
-        <li>Is Andrew ASA 101 - Basic Keel Boat Certified?</li>
-        <li>Does he want to be?</li>
-    </ol>
+    <div>
+        <p id="questions">Questions:</p>
+        <ol>
+            <li>Does Andrew like to hike?</li>
+            <li>Is Andrew SCUBA certified?</li>
+            <li>Is Andrew a veteran?</li>
+            <li>Is Andrew ASA 101 - Basic Keel Boat Certified?</li>
+            <li>Does he want to be?</li>
+        </ol>
+    </div>
+    
 
     <script>
         // intoduction
@@ -61,11 +64,11 @@
         var veteran = prompt('Is Andrew a veteran?');
         veteran = veteran.toLowerCase();
         if (veteran[0] === 'y') {
-            alert('Nice job! I am a veteran.');
+            alert('Nice job! I am a Navy veteran.');
             console.log('veteran question correct');
             questionsCorrect++;
         } else if (veteran[0] === 'n') {
-            alert('WRONG! I am a veteran.');
+            alert('WRONG! I am a Navy veteran.');
             console.log('veteran question wrong');
         } else {
             alert('Come on, answer yes or no.');
@@ -76,12 +79,12 @@
         var sail = prompt('Is Andrew ASA 101 - Basic Keel Boat Certified?');
         sail = sail.toLowerCase();
         if (sail[0] === 'y') {
+            alert('WRONG! I am not yet certified.');
+            console.log('sail question wrong');
+        } else if (sail[0] === 'n') {
             alert('Nice job! I am not yet certified.');
             console.log('sail question correct');
             questionsCorrect++;
-        } else if (sail[0] === 'n') {
-            alert('WRONG! I am not yet certified.');
-            console.log('sail question wrong');
         } else {
             alert('Come on, answer yes or no.');
             console.log('sail question not answered with yes or no');

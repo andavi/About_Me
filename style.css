@@ -1,17 +1,17 @@
-* {
-    /* outline: black 1px solid; */
-}
-
 body {
-    background-color: rgb(142, 198, 247);
+    color: white;
+    background-color: rgb(128, 195, 253);
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
-    width: 35%;
+    width: 50%;
 }
 
-/* body {
-    
-} */
+div {
+    padding: 10px;
+    padding-left: 40px;
+    /* padding-top: -10px; */
+    outline: white 2px solid;
+}
 
 #questions {
     font-size: 135%;
