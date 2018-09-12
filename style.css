@@ -6,11 +6,17 @@ body {
     width: 50%;
 }
 
+h1 {
+    text-align: center;
+    border-bottom: white 2px solid;
+    padding-bottom: 20px;
+}
+
 div {
     padding: 10px;
     padding-left: 40px;
-    /* padding-top: -10px; */
-    outline: white 2px solid;
+    border: white 2px solid;
+    border-radius: 10px;
 }
 
 #questions {
