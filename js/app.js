@@ -3,6 +3,9 @@
 // intoduction
 var questionsCorrect = 0;
 var userName = prompt('Welcome to my site. What\'s your name?');
+while(!userName) {
+  userName = prompt('What\'s your name?');
+}
 alert('Hello ' + userName + '. We are going to play a game. Answer yes or no to the following questions.');
 
 // bike question
