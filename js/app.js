@@ -83,7 +83,7 @@ if (want[0] === 'y') {
   console.log('want question not answered with yes or no');
 }
 
-// guessing game
+// number game
 var favNum = (Math.floor(Math.random() * Math.floor(5))) + 1;
 favNum = favNum.toString();
 console.log('favorite number is: ' + favNum);
@@ -100,6 +100,30 @@ for (var i = 0; i < 4; i++) {
     break;
   }
 }
+
+// state game
+var states = ['north carolina', 'florida', 'virginia', 'arizona'];
+guess = prompt ('Can you guess a state I lived in other than Washington? You have six guesses.');
+var guessedCorrectly = false;
+for (i = 0; i < 6; i++) {
+  for (var j = 0; j < states.length; j++) {
+    if (states[j] === guess.toLowerCase()) {
+      guessedCorrectly = true;
+      break;
+    }
+  }
+  if (guessedCorrectly) {
+    alert('Great job! I have lived in ' + guess + '.');
+    console.log('state guessed correctly');
+    break;
+  }
+  guess = prompt('I never lived in ' + guess + '. Guess again.');
+  console.log((i+1) + ' guesses wrong');
+}
+if (!guessedCorrectly) {
+  alert('Not quite. E for effort.');
+}
+alert('I have lived in North Carolina, Florida, Virginia, and Arizona.');
 
 // outro
 if (questionsCorrect > 5) {
