@@ -83,12 +83,30 @@ if (want[0] === 'y') {
   console.log('want question not answered with yes or no');
 }
 
+// guessing game
+var favNum = (Math.floor(Math.random() * Math.floor(5))) + 1;
+favNum = favNum.toString();
+console.log('favorite number is: ' + favNum);
+var guess = prompt('Guess my favorite number. It is between 1 and 5. You have four guesses.');
+
+for (var i = 0; i < 4; i++) {
+  if (guess !== favNum) {
+    guess = prompt('Wrong guess. Try again!');
+    console.log((i+1) + ' guess(es) wrong. guessed: ' + guess);
+  } else {
+    alert('Great job! My favorite number is ' + favNum + '.');
+    console.log('correct guess');
+    questionsCorrect++;
+    break;
+  }
+}
+
 // outro
-if (questionsCorrect > 3) {
-  var message = 'Great job ' + userName + '! You answered ' + questionsCorrect + ' out of 5 questions correctly.';
+if (questionsCorrect > 5) {
+  var message = 'Great job ' + userName + '! You answered ' + questionsCorrect + ' out of 7 questions correctly.';
 } else {
-  message = 'Mediocre job, ' + userName + '. You answered ' + questionsCorrect + ' out of 5 questions correctly. Better luck next time!';
+  message = 'Mediocre job, ' + userName + '. You answered ' + questionsCorrect + ' out of 7 questions correctly. Better luck next time!';
 }
 alert(message);
 document.getElementById('outro').innerHTML = message;
-console.log(questionsCorrect + ' out of 5 questions answered correctly');
+console.log(questionsCorrect + ' out of 7 questions answered correctly');

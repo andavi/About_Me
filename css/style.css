@@ -11,17 +11,25 @@ h1 {
     padding-bottom: 20px;
 }
 
-div {
-    padding: 10px;
-    padding-left: 40px;
-    border: 2px solid rgb(80, 80, 80);
-    border-radius: 10px;
+p {
+    width: 95%;
 }
 
-.list {
+div {
+    padding-left: 40px;
+}
+
+.box {
+    padding: 10px;
+    border-radius: 10px;
     display: inline-block;
+    border: 2px solid rgb(80, 80, 80);
     box-shadow: 5px 5px 5px rgb(80, 80, 80);
-    margin: 1%;
+    margin: 2%;
+}
+
+p.box{
+    text-align: center;
 }
 
 .list-title {
