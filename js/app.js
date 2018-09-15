@@ -8,79 +8,49 @@ while(!userName) {
 }
 alert('Hello ' + userName + '. We are going to play a game. Answer yes or no to the following questions.');
 
-// bike question
-var bike = prompt('Does Andrew like to bike?');
-bike = bike.toLowerCase();
-if (bike[0] === 'y') {
-  alert('Nice job! I love to bike.');
-  console.log('bike question correct');
-  questionsCorrect++;
-} else if (bike[0] === 'n') {
-  alert('WRONG! I do like to bike.');
-  console.log('bike question wrong');
-} else {
-  alert('Come on, answer yes or no.');
-  console.log('bike question not answered with yes or no');
-}
+// five questions about me
+var questionsList = [
+  'Does Andrew like to bike?',
+  'Is Andrew SCUBA certified?',
+  'Is Andrew a veteran?',
+  'Is Andrew ASA 101 - Basic Keel Boat Certified?',
+  'Does Andrew want to be ASA 101 - Basic Keel Boat Certified?'
+];
 
-// scuba question
-var scuba = prompt('Is Andrew SCUBA certified?');
-scuba = scuba.toLowerCase();
-if (scuba[0] === 'y') {
-  alert('Nice job! I am SCUBA ceritified.');
-  console.log('scuba question correct');
-  questionsCorrect++;
-} else if (scuba[0] === 'n') {
-  alert('WRONG! I am SCUBA ceritified.');
-  console.log('scuba question wrong');
-} else {
-  alert('Come on, answer yes or no.');
-  console.log('scuba question not answered with yes or no');
-}
+var answers = ['y', 'y', 'y', 'n', 'y'];
 
-// veteran question
-var veteran = prompt('Is Andrew a veteran?');
-veteran = veteran.toLowerCase();
-if (veteran[0] === 'y') {
-  alert('Nice job! I am a Navy veteran.');
-  console.log('veteran question correct');
-  questionsCorrect++;
-} else if (veteran[0] === 'n') {
-  alert('WRONG! I am a Navy veteran.');
-  console.log('veteran question wrong');
-} else {
-  alert('Come on, answer yes or no.');
-  console.log('veteran question not answered with yes or no');
-}
+var correctResponses = [
+  'Nice job! I love to bike.',
+  'Nice job! I am SCUBA ceritified.',
+  'Nice job! I am a Navy veteran.',
+  'Nice job! I am not yet certified.',
+  'Nice job! I do want this certification.'
+];
 
-// sail question
-var sail = prompt('Is Andrew ASA 101 - Basic Keel Boat Certified?');
-sail = sail.toLowerCase();
-if (sail[0] === 'y') {
-  alert('WRONG! I am not yet certified.');
-  console.log('sail question wrong');
-} else if (sail[0] === 'n') {
-  alert('Nice job! I am not yet certified.');
-  console.log('sail question correct');
-  questionsCorrect++;
-} else {
-  alert('Come on, answer yes or no.');
-  console.log('sail question not answered with yes or no');
-}
+var incorrectResponses = [
+  'WRONG! I do like to bike.',
+  'WRONG! I am SCUBA ceritified.',
+  'WRONG! I am a Navy veteran.',
+  'WRONG! I am not yet certified.',
+  'WRONG! I do want this certification.'
+];
 
-// want question
-var want = prompt('Does Andrew want to be ASA 101 - Basic Keel Boat Certified?');
-want = want.toLowerCase();
-if (want[0] === 'y') {
-  alert('Nice job! I do want this certification.');
-  console.log('want question correct');
-  questionsCorrect++;
-} else if (want[0] === 'n') {
-  alert('WRONG! I do want this certification.');
-  console.log('want question wrong');
-} else {
-  alert('Come on, answer yes or no.');
-  console.log('want question not answered with yes or no');
+var response;
+
+for (var i = 0; i < 5; i++) {
+  while(!response || !(response[0] === 'y' || response[0] === 'n')) {
+    response = prompt(questionsList[i]);
+    response = response.toLowerCase();
+  }
+  if (response[0] === answers[i]) {
+    alert(correctResponses[i]);
+    console.log('question ' + (i+1) + ' answered correctly: ' + response + '==' + answers[i]);
+    questionsCorrect++;
+  } else {
+    alert(incorrectResponses[i]);
+    console.log('question ' + (i+1) + ' answered incorrectly: ' + response + '==' + answers[i]);
+  }
+  response = '';
 }
 
 // number game
@@ -89,7 +59,7 @@ favNum = favNum.toString();
 console.log('favorite number is: ' + favNum);
 var guess = prompt('Guess my favorite number. It is between 1 and 5. You have four guesses.');
 
-for (var i = 0; i < 4; i++) {
+for (i = 0; i < 4; i++) {
   if (guess !== favNum) {
     guess = prompt('Wrong guess. Try again!');
     console.log((i+1) + ' guess(es) wrong. guessed: ' + guess);
@@ -115,6 +85,7 @@ for (i = 0; i < 6; i++) {
   if (guessedCorrectly) {
     alert('Great job! I have lived in ' + guess + '.');
     console.log('state guessed correctly');
+    questionsCorrect++;
     break;
   }
   guess = prompt('I never lived in ' + guess + '. Guess again.');
