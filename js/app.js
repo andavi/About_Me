@@ -63,6 +63,7 @@ var askQuestions = function() {
 
 // number game
 var playNumberGame = function() {
+  var guessedCorrectly = false;
   var favNum = (Math.floor(Math.random() * Math.floor(5))) + 1;
   favNum = favNum.toString();
   console.log('favorite number is: ' + favNum);
@@ -76,8 +77,13 @@ var playNumberGame = function() {
       alert('Great job! My favorite number is ' + favNum + '.');
       console.log('correct guess');
       questionsCorrect++;
+      guessedCorrectly = true;
       break;
     }
+  }
+
+  if (!guessedCorrectly) {
+    alert('The number I was thinking was ' + favNum + '.');
   }
 };
 
