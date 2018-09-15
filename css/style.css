@@ -13,7 +13,6 @@ h1 {
     border-bottom: 2px solid rgb(80, 80, 80);
     position: fixed;
     top: 0;
-    /* z-index: 1; */
 }
 
 div {
@@ -23,7 +22,6 @@ div {
 .box {
     padding: 10px;
     border-radius: 10px;
-    /* display: inline-block; */
     border: 2px solid rgb(80, 80, 80);
     box-shadow: 5px 5px 5px rgb(80, 80, 80);
     margin: 2%;
