@@ -7,8 +7,8 @@ body {
 
 h1 {
     text-align: center;
-    border-bottom: 2px solid rgb(80, 80, 80);
-    padding-bottom: 20px;
+    /* border-bottom: 2px solid rgb(80, 80, 80); */
+    /* padding-bottom: 20px; */
 }
 
 p {
@@ -38,6 +38,7 @@ p.box{
 
 #top-ten {
     float: right;
+    text-align: center;
 }
 
 #top-ten>ol{

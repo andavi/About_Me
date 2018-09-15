@@ -2,7 +2,7 @@
 
 // intoduction
 var questionsCorrect = 0;
-var userName = prompt('Welcome to my site. What\'s your name?');
+var userName;
 while(!userName) {
   userName = prompt('What\'s your name?');
 }
