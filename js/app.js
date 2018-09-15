@@ -22,9 +22,9 @@ var askQuestions = function() {
     'Is Andrew ASA 101 - Basic Keel Boat Certified?',
     'Does Andrew want to be ASA 101 - Basic Keel Boat Certified?'
   ];
-  
+
   var answers = ['y', 'y', 'y', 'n', 'y'];
-  
+
   var correctResponses = [
     'Nice job! I love to bike.',
     'Nice job! I am SCUBA ceritified.',
@@ -32,7 +32,7 @@ var askQuestions = function() {
     'Nice job! I am not yet certified.',
     'Nice job! I do want this certification.'
   ];
-  
+
   var incorrectResponses = [
     'WRONG! I do like to bike.',
     'WRONG! I am SCUBA ceritified.',
@@ -40,9 +40,9 @@ var askQuestions = function() {
     'WRONG! I am not yet certified.',
     'WRONG! I do want this certification.'
   ];
-  
+
   var response;
-  
+
   for (var i = 0; i < 5; i++) {
     while(!response || !(response[0] === 'y' || response[0] === 'n')) {
       response = prompt(questionsList[i]);
@@ -67,7 +67,7 @@ var playNumberGame = function() {
   favNum = favNum.toString();
   console.log('favorite number is: ' + favNum);
   var guess = prompt('Guess my favorite number. It is between 1 and 5. You have four guesses.');
-  
+
   for (var i = 0; i < 4; i++) {
     if (guess !== favNum) {
       guess = prompt('Wrong guess. Try again!');
