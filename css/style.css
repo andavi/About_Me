@@ -2,17 +2,18 @@ body {
     color: rgb(80, 80, 80);
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
-    width: 50%;
+    width: 55%;
 }
 
 h1 {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 55%;
+    margin: 0 auto;
     text-align: center;
-    /* border-bottom: 2px solid rgb(80, 80, 80); */
-    /* padding-bottom: 20px; */
-}
-
-p {
-    width: 95%;
+    border-bottom: 2px solid rgb(80, 80, 80);
+    position: fixed;
+    top: 0;
+    /* z-index: 1; */
 }
 
 div {
@@ -22,7 +23,7 @@ div {
 .box {
     padding: 10px;
     border-radius: 10px;
-    display: inline-block;
+    /* display: inline-block; */
     border: 2px solid rgb(80, 80, 80);
     box-shadow: 5px 5px 5px rgb(80, 80, 80);
     margin: 2%;
@@ -30,10 +31,20 @@ div {
 
 p.box{
     text-align: center;
+    clear: right;
+}
+
+.subtitle {
+    font-size: 120%;
+    margin-top: 50px;
 }
 
 .list-title {
     font-size: 135%;
+}
+
+#questions {
+    float: left;
 }
 
 #top-ten {

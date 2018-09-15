@@ -7,6 +7,7 @@ while(!userName) {
   userName = prompt('What\'s your name?');
 }
 alert('Hello ' + userName + '. We are going to play a game. Answer yes or no to the following questions.');
+console.log('userName: ' + userName);
 
 // five questions about me
 var questionsList = [
