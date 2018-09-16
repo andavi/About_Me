@@ -1,5 +1,6 @@
 'use strict';
 
+// global variables
 var questionsCorrect = 0;
 var userName;
 
@@ -50,11 +51,11 @@ var askQuestions = function() {
     }
     if (response[0] === answers[i]) {
       alert(correctResponses[i]);
-      console.log('question ' + (i+1) + ' answered correctly: ' + response + '==' + answers[i]);
+      console.log('question ' + (i+1) + ' answered correctly: ' + response + ': ' + answers[i]);
       questionsCorrect++;
     } else {
       alert(incorrectResponses[i]);
-      console.log('question ' + (i+1) + ' answered incorrectly: ' + response + '==' + answers[i]);
+      console.log('question ' + (i+1) + ' answered incorrectly: ' + response + ': ' + answers[i]);
     }
     response = '';
   }
@@ -70,12 +71,15 @@ var playNumberGame = function() {
   var guess = prompt('Guess my favorite number. It is between 1 and 5. You have four guesses.');
 
   for (var i = 0; i < 4; i++) {
-    if (guess !== favNum) {
-      guess = prompt('Wrong guess. Try again!');
+    if (guess !== favNum && i === 3) {
       console.log((i+1) + ' guess(es) wrong. guessed: ' + guess);
+      break;
+    } else if (guess !== favNum) {
+      console.log((i+1) + ' guess(es) wrong. guessed: ' + guess);
+      guess = prompt('Wrong guess. Try again!');
     } else {
-      alert('Great job! My favorite number is ' + favNum + '.');
       console.log('correct guess');
+      alert('Great job! My favorite number is ' + favNum + '.');
       questionsCorrect++;
       guessedCorrectly = true;
       break;
@@ -105,9 +109,12 @@ var playStateGame = function() {
       console.log('state guessed correctly');
       questionsCorrect++;
       break;
+    } else if (i === 5) {
+      console.log((i+1) + ' guesses wrong: ' + guess);
+      break;
     }
+    console.log((i+1) + ' guesses wrong: ' + guess);
     guess = prompt('I never lived in ' + guess + '. Guess again.');
-    console.log((i+1) + ' guesses wrong');
   }
   if (!guessedCorrectly) {
     alert('Not quite. E for effort.');
