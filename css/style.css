@@ -24,7 +24,6 @@ div {
     border-radius: 10px;
     border: 2px solid rgb(80, 80, 80);
     box-shadow: 5px 5px 5px rgb(80, 80, 80);
-    margin: 2%;
 }
 
 p.box{
@@ -34,6 +33,9 @@ p.box{
 
 .subtitle {
     font-size: 120%;
+}
+
+#top {
     margin-top: 50px;
 }
 
@@ -43,6 +45,7 @@ p.box{
 
 #questions {
     float: left;
+    margin-right: 2%;
 }
 
 #top-ten {
